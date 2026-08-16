@@ -68,6 +68,17 @@ Because both heteroskedasticity and autocorrelation were detected, standard OLS 
 *   **Macroeconomic Drivers:** Traditional economic drivers, specifically GDP per capita ($p = 0.0641$) and Trade Openness ($p = 0.0665$), showed marginal statistical significance, indicating they remain the overriding influencers of FDI.
 *   **Policy Implication:** Digital trade openness currently acts as a complementary factor rather than a standalone magnet for FDI. Policymakers must pursue a balanced approach, pairing digital liberalization with strong macroeconomic stability.
 
+### Limitations & Assumptions
+*   **Cluster Count:** The sample size is limited to 15 countries due to DSTRI data availability. Utilizing clustered standard errors on a small number of clusters ($N < 30$) can artificially inflate standard errors, making statistical significance harder to detect.
+*   **Endogeneity/Reverse Causality:** The model assumes DSTRI impacts FDI, but there is a potential "chicken and egg" dynamic where high FDI inflows might drive a country to adopt more open digital policies.
+*   **Imputation Smoothing:** Linear interpolation was used to fill gaps in the dataset. This assumes a constant rate of change between known points, which may smooth out the impact of volatile, real-world macroeconomic shocks.
+
+### Repo Guide
+**Folder Structure:**
+*   `📁 data/`: Contains the final raw dataset (`econ pdata.xlsx`) used for the analysis (before processing).
+*    The Jupyter notebook (`econ project analysis final.ipynb`) with the full data cleaning, EDA, and econometric modeling workflow.
+*   `📁 docs/`: Contains the final analytical report and presentation slide deck.
+
 ## 🚀 How to Run the Code
 1. Clone the repository: `git clone https://github.com/yourusername/digital-trade-fdi.git`
 2. Install the required dependencies: `pip install pandas numpy seaborn matplotlib statsmodels linearmodels scipy`
